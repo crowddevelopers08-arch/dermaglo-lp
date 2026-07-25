@@ -6,6 +6,7 @@
   --foreground: #1f1f1f;
   --accent: #c85a2a;
   --background: #f8f5f1;
+  color-scheme: light;
 }
 
 @theme inline {
@@ -40,6 +41,22 @@ input,
 select,
 textarea {
   font: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #353535 inset !important;
+  box-shadow: 0 0 0px 1000px #353535 inset !important;
+  -webkit-appearance: none !important;
+  caret-color: #fff !important;
+  transition: background-color 9999s ease-in-out 0s !important;
 }
 
 .scrollbar-hide {

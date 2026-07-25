@@ -1,5 +1,10 @@
 "use client";
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
+const FORM_SOURCE = "dermaglo-form";
+
 const NAVY = "#1F1F1F";
 const ACCENT = "#C85A2A";
 const PRIMARY = "#D96A3A";
@@ -98,6 +103,53 @@ function ChevronDownIcon() {
 }
 
 export default function HeroBannerSection() {
+  const router = useRouter();
+  const [submitting, setSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setFormError("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const name = String(formData.get("name") || "").trim();
+    const phone = String(formData.get("phone") || "").trim();
+    const concern = String(formData.get("concern") || "").trim();
+
+    if (!name || !phone || !concern) {
+      setFormError("Please fill in your name, phone number, and concern.");
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/submissions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: FORM_SOURCE,
+          name,
+          phone,
+          concern,
+          pageUrl: window.location.href,
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Submission failed");
+      }
+
+      form.reset();
+      router.push("/thank-you");
+    } catch {
+      setFormError("Something went wrong. Please try again or WhatsApp us.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
   return (
     <section className="font-sans relative overflow-hidden bg-gradient-to-b from-[#E8E2DA] to-[#F8F5F1] px-4 py-8 sm:px-10 sm:py-8 lg:px-10">
       <div
@@ -184,7 +236,11 @@ export default function HeroBannerSection() {
             Book Your Consultation
           </h2>
 
-          <form className="mt-6 flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+          <form
+            name={FORM_SOURCE}
+            className="mt-6 flex flex-col gap-4"
+            onSubmit={handleSubmit}
+          >
             <label className="flex flex-col gap-1.5">
               <span
                 className="text-[11px] font-semibold uppercase tracking-wide sm:text-xs"
@@ -214,7 +270,7 @@ export default function HeroBannerSection() {
                   type="tel"
                   name="phone"
                   placeholder="10-digit number"
-                  className="w-full bg-transparent text-[11px] text-white placeholder:text-[13px] placeholder:text-white/40 outline-none sm:text-sm sm:placeholder:text-sm"
+                  className="w-full rounded-full bg-transparent text-[11px] text-white placeholder:text-[13px] placeholder:text-white/40 outline-none sm:text-sm sm:placeholder:text-sm"
                 />
               </div>
             </label>
@@ -247,12 +303,19 @@ export default function HeroBannerSection() {
               </div>
             </label>
 
+            {formError && (
+              <p className="text-center text-[11px] font-medium text-red-400 sm:text-xs">
+                {formError}
+              </p>
+            )}
+
             <button
               type="submit"
-              className="hero-submit-button mt-2 whitespace-nowrap rounded-full px-4 py-2.5 text-[13px] font-bold uppercase tracking-wide text-white transition-colors hover:opacity-90 sm:px-6 sm:py-4 sm:text-sm"
+              disabled={submitting}
+              className="hero-submit-button mt-2 whitespace-nowrap rounded-full px-4 py-2.5 text-[13px] font-bold uppercase tracking-wide text-white transition-colors hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 sm:px-6 sm:py-4 sm:text-sm"
               style={{ backgroundColor: ACCENT }}
             >
-              Book Your Consultation
+              {submitting ? "Submitting..." : "Book Your Consultation"}
             </button>
           </form>
         </div>

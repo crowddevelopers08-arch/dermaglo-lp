@@ -92,7 +92,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section className="px-4 py-10 sm:px-10 sm:py-14">
-        <div className="mx-auto max-w-4xl space-y-4">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2">
           {policySections.map((section, index) => (
             <article
               key={section.title}
@@ -114,7 +114,7 @@ export default function PrivacyPolicyPage() {
             </article>
           ))}
 
-          <article className="rounded-2xl bg-[#1F1F1F] p-6 text-white sm:p-8">
+          <article className="rounded-2xl bg-[#1F1F1F] p-6 text-white sm:p-8 md:col-span-2">
             <h2 className="text-xl font-extrabold">Contact Us</h2>
             <p className="mt-3 text-sm leading-6 text-white/75 sm:text-base">
               For privacy-related questions, contact DermaGlow Studio at{" "}
