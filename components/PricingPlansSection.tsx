@@ -164,7 +164,7 @@ export default function PricingPlansSection() {
     <section className="font-sans bg-[#E8E2DA]/55 px-4 py-8 sm:px-10 sm:py-10 lg:px-20">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
-          <div data-pricing-animate className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#C85A2A] sm:gap-3 sm:text-xs">
+          <div data-pricing-animate className="inline-flex items-center max-sm:gap-1 max-sm:text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#C85A2A] sm:gap-3 sm:text-xs">
             <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
             <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-[#D96A3A]" aria-hidden="true">
               <path d="M12 2.75c.55 4.87 4.38 8.7 9.25 9.25-4.87.55-8.7 4.38-9.25 9.25C11.45 16.38 7.62 12.55 2.75 12 7.62 11.45 11.45 7.62 12 2.75Z" fill="currentColor" />

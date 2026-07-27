@@ -30,7 +30,7 @@ export default function MeetDermatologistSection() {
         </div>
 
         <div className="contents sm:order-2 sm:block">
-          <div className="order-1 inline-flex w-fit items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#C85A2A] sm:gap-3 sm:text-xs">
+          <div className="order-1 inline-flex w-fit items-center max-sm:gap-1 max-sm:text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#C85A2A] sm:gap-3 sm:text-xs">
             <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
             <svg
               viewBox="0 0 24 24"

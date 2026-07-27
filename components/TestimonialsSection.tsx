@@ -195,38 +195,32 @@ export default function TestimonialsSection() {
         {[...testimonials, ...testimonials].map((testimonial, index) => (
           <article
             key={`${testimonial.name}-${index}`}
-            className={`min-h-[420px] w-full shrink-0 gap-5 rounded-[22px] border border-[#D96A3A]/35 bg-[#E8E2DA]/70 p-4 sm:min-h-[260px] sm:w-[654px] sm:grid-cols-[287px_1fr] sm:gap-9 sm:rounded-[30px] sm:p-7 ${
-              index === mobileIndex ? "grid" : "hidden sm:grid"
-            }`}
+            className={`min-h-[260px] w-full shrink-0 rounded-[22px] border border-[#D96A3A]/35 bg-[#E8E2DA]/70 p-5 sm:min-h-[240px] sm:w-[400px] sm:rounded-[30px] sm:p-8 ${
+              index === mobileIndex ? "flex" : "hidden sm:flex"
+            } relative flex-col justify-center`}
           >
-            <div className="relative min-h-[260px] overflow-hidden rounded-[15px] sm:min-h-[260px] sm:rounded-[17px]">
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-              <div className="absolute bottom-0 left-0 rounded-tr-full bg-[#1F1F1F]/80 px-5 py-2.5 text-base tracking-[2px] text-[#ffd231] sm:px-6 sm:py-3 sm:text-xl">
-                ★★★★☆
+            <span
+              className="absolute right-3 top-0 font-serif text-[90px] leading-none text-[#D96A3A]/20 sm:text-[110px]"
+              aria-hidden="true"
+            >
+              ”
+            </span>
+
+            <div className="relative flex items-start justify-between gap-3">
+              <div>
+                <h3 className="text-lg font-medium">{testimonial.name}</h3>
+                <p className="mt-1 text-sm text-[#8A6F63]">
+                  {testimonial.role}
+                </p>
               </div>
+              <span className="shrink-0 rounded-full bg-[#1F1F1F]/80 px-3 py-1.5 text-sm tracking-[2px] text-[#ffd231]">
+                ★★★★☆
+              </span>
             </div>
 
-            <div className="relative flex flex-col justify-center py-2 sm:py-5">
-              <span
-                className="absolute right-2 top-0 font-serif text-[90px] leading-none text-[#D96A3A]/20 sm:right-3 sm:top-2 sm:text-[130px]"
-                aria-hidden="true"
-              >
-                ”
-              </span>
-              <h3 className="relative text-lg font-medium">
-                {testimonial.name}
-              </h3>
-              <p className="relative mt-1 text-sm text-[#8A6F63]">
-                {testimonial.role}
-              </p>
-              <p className="relative mt-8 max-w-[400px] text-sm font-semibold leading-[1.7] text-[#1F1F1F]/80 sm:mt-16">
-                {testimonial.quote}
-              </p>
-            </div>
+            <p className="relative mt-6 text-sm font-semibold leading-[1.7] text-[#1F1F1F]/80">
+              {testimonial.quote}
+            </p>
           </article>
         ))}
       </div>
