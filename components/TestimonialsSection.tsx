@@ -145,14 +145,14 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section id="testimonials" className="scroll-mt-24 font-sans overflow-hidden bg-[#F8F5F1] py-8 text-[#1F1F1F] sm:py-10 max-sm:px-4">
+    <section id="testimonials" className="scroll-mt-24 font-sans overflow-hidden bg-white py-8 text-[#1F1F1F] sm:py-10 max-sm:px-4">
       <header className="mx-auto px-4 text-center sm:px-6">
-        <div className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#C85A2A] sm:gap-3 sm:text-xs">
-          <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
+        <div className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-black sm:gap-3 sm:text-xs">
+          <span className="h-px w-4 bg-black sm:w-8" />
           <svg
             viewBox="0 0 24 24"
             fill="none"
-            className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-[#D96A3A]"
+            className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-black"
             aria-hidden="true"
           >
             <path
@@ -164,7 +164,7 @@ export default function TestimonialsSection() {
           <svg
             viewBox="0 0 24 24"
             fill="none"
-            className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-[#D96A3A]"
+            className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-black"
             aria-hidden="true"
           >
             <path
@@ -172,11 +172,11 @@ export default function TestimonialsSection() {
               fill="currentColor"
             />
           </svg>
-          <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
+          <span className="h-px w-4 bg-black sm:w-8" />
         </div>
         <h2 className="mx-auto mt-5 max-w-[850px] text-3xl font-extrabold leading-[1.2] text-[#1F1F1F] sm:mt-4 sm:text-4xl">
           Trusted by clients, backed by{" "}
-          <span className="relative inline-block px-2 text-[#C85A2A]">
+          <span className="relative inline-block px-2 text-black">
             <span className="absolute inset-x-0 bottom-0 h-[38%] rounded-sm" />
             <span className="relative"> real experiences</span>
           </span>
@@ -195,12 +195,12 @@ export default function TestimonialsSection() {
         {[...testimonials, ...testimonials].map((testimonial, index) => (
           <article
             key={`${testimonial.name}-${index}`}
-            className={`min-h-[260px] w-full shrink-0 rounded-[22px] border border-[#D96A3A]/35 bg-[#E8E2DA]/70 p-5 sm:min-h-[240px] sm:w-[400px] sm:rounded-[30px] sm:p-8 ${
+            className={`min-h-[260px] w-full shrink-0 rounded-[22px] border border-[#eeeadd] bg-[#eeeadd] p-5 sm:min-h-[240px] sm:w-[400px] sm:rounded-[30px] sm:p-8 ${
               index === mobileIndex ? "flex" : "hidden sm:flex"
             } relative flex-col justify-center`}
           >
             <span
-              className="absolute right-3 top-0 font-serif text-[90px] leading-none text-[#D96A3A]/20 sm:text-[110px]"
+              className="absolute right-3 top-0 font-serif text-[90px] leading-none text-[#eeeadd] sm:text-[110px]"
               aria-hidden="true"
             >
               ”
@@ -230,7 +230,7 @@ export default function TestimonialsSection() {
           type="button"
           aria-label="Previous testimonial"
           onClick={() => move(-1)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-[#D96A3A]/60 text-[#C85A2A] transition hover:bg-[#C85A2A] hover:text-white sm:h-14 sm:w-14"
+          className="wave-btn relative flex h-11 w-11 items-center justify-center rounded-full bg-black text-white transition hover:opacity-80 sm:h-14 sm:w-14"
         >
           <ArrowIcon direction="left" />
         </button>
@@ -238,7 +238,7 @@ export default function TestimonialsSection() {
           type="button"
           aria-label="Next testimonial"
           onClick={() => move(1)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-[#D96A3A]/60 text-[#C85A2A] transition hover:bg-[#C85A2A] hover:text-white sm:h-14 sm:w-14"
+          className="wave-btn relative flex h-11 w-11 items-center justify-center rounded-full bg-black text-white transition hover:opacity-80 sm:h-14 sm:w-14"
         >
           <ArrowIcon direction="right" />
         </button>

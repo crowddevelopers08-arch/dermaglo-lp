@@ -41,24 +41,24 @@ const policySections = [
 
 function SparkleLabel() {
   return (
-    <div className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#C85A2A] sm:gap-3 sm:text-xs">
-      <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
-      <span className="text-base text-[#D96A3A]" aria-hidden="true">
+    <div className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-black sm:gap-3 sm:text-xs">
+      <span className="h-px w-4 bg-[#eeeadd] sm:w-8" />
+      <span className="text-base text-black" aria-hidden="true">
         ✦
       </span>
       <span>Legal Information</span>
-      <span className="text-base text-[#D96A3A]" aria-hidden="true">
+      <span className="text-base text-black" aria-hidden="true">
         ✦
       </span>
-      <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
+      <span className="h-px w-4 bg-[#eeeadd] sm:w-8" />
     </div>
   );
 }
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-[#F8F5F1] text-[#1F1F1F]">
-      <header className="border-b border-[#D96A3A]/20 px-4 py-4 sm:px-10">
+    <main className="min-h-screen bg-white text-[#1F1F1F]">
+      <header className="border-b border-[#eeeadd] px-4 py-4 sm:px-10">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <Link href="/" className="relative h-12 w-36 sm:h-14 sm:w-44">
             <Image
@@ -72,17 +72,17 @@ export default function PrivacyPolicyPage() {
           </Link>
           <Link
             href="/"
-            className="rounded-full border border-[#D96A3A]/40 px-4 py-2 text-xs font-bold text-[#C85A2A] transition-colors hover:bg-[#D96A3A] hover:text-white sm:px-5 sm:text-sm"
+            className="wave-btn relative rounded-full border border-black px-4 py-2 text-xs font-bold text-black transition-colors hover:bg-black hover:text-white sm:px-5 sm:text-sm"
           >
             Back to Home
           </Link>
         </div>
       </header>
 
-      <section className="bg-[#E8E2DA] px-4 py-12 text-center sm:px-10 sm:py-16">
+      <section className="bg-[#eeeadd] px-4 py-12 text-center sm:px-10 sm:py-16">
         <SparkleLabel />
         <h1 className="mt-4 text-3xl font-extrabold leading-tight sm:text-5xl">
-          Privacy <span className="text-[#C85A2A]">Policy</span>
+          Privacy <span className="text-black">Policy</span>
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-[#1F1F1F]/70 sm:text-base sm:leading-7">
           This policy explains how DermaGlow Studio collects, uses, and
@@ -96,10 +96,10 @@ export default function PrivacyPolicyPage() {
           {policySections.map((section, index) => (
             <article
               key={section.title}
-              className="rounded-2xl border border-[#D96A3A]/20 bg-white p-5 sm:p-7"
+              className="rounded-2xl border border-[#eeeadd] bg-white p-5 sm:p-7"
             >
               <div className="flex items-start gap-4">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#E8E2DA] text-xs font-extrabold text-[#C85A2A]">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#eeeadd] text-xs font-extrabold text-black">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div>
@@ -120,7 +120,7 @@ export default function PrivacyPolicyPage() {
               For privacy-related questions, contact DermaGlow Studio at{" "}
               <a
                 href="tel:+917019643144"
-                className="font-bold text-[#D96A3A]"
+                className="font-bold text-white"
               >
                 7019643144
               </a>

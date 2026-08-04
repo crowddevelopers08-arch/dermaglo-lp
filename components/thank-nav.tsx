@@ -3,8 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const PRIMARY = "#D96A3A";
-
 function PhoneIcon() {
   return (
     <svg
@@ -24,7 +22,7 @@ function PhoneIcon() {
 
 export default function DermaGlowNavbars() {
   return (
-    <header className="sticky top-0 z-30 border-b border-[#E8E2DA] bg-[#F8F5F1]">
+    <header className="sticky top-0 z-30 border-b border-[#eeeadd] bg-white">
       <div className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-2 px-3 py-2.5 sm:min-h-0 sm:gap-3 sm:px-10 sm:py-3 lg:px-16">
         <Link
           href="/"
@@ -42,8 +40,7 @@ export default function DermaGlowNavbars() {
 
         <a
           href="tel:+917019643144"
-          className="flex h-12 min-w-0 shrink items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-3 text-xs font-bold text-white transition-opacity hover:opacity-90 sm:h-auto sm:shrink-0 sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
-          style={{ backgroundColor: PRIMARY }}
+          className="wave-btn relative flex h-12 min-w-0 shrink items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-black px-3 text-xs font-bold text-white transition-opacity hover:opacity-90 sm:h-auto sm:shrink-0 sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
           aria-label="Call DermaGlow Studio at +91 70196 43144"
         >
           <span className="flex shrink-0 justify-center">

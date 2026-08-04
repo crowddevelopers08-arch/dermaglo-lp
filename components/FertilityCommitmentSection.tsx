@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-const ACCENT = "#C85A2A";
 const NAVY = "#1F1F1F";
 
 const DIFFERENTIATORS = [
@@ -31,7 +30,7 @@ function CheckBadge({ className = "" }: { className?: string }) {
   return (
     <span
       className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full p-1 ${className}`}
-      style={{ backgroundColor: ACCENT }}
+      style={{ backgroundColor: "#000000" }}
     >
       <CheckIcon />
     </span>
@@ -54,27 +53,27 @@ function ArrowUpRightIcon() {
 
 export default function FertilityCommitmentSection() {
   return (
-    <section id="why-choose-us" className="scroll-mt-24 font-sans bg-[#F8F5F1] px-4 py-6 sm:px-10 sm:py-8 lg:px-20">
+    <section id="why-choose-us" className="scroll-mt-24 font-sans px-4 py-6 sm:px-10 sm:py-8 lg:px-20">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 sm:gap-10 lg:grid-cols-2 lg:gap-16">
         {/* Left column */}
         <div>
-          <div className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#C85A2A] sm:gap-3 sm:text-xs">
-            <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
-            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-[#D96A3A]" aria-hidden="true">
+          <div className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-black sm:gap-3 sm:text-xs">
+            <span className="h-px w-4 bg-black sm:w-8" />
+            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-black" aria-hidden="true">
               <path d="M12 2.75c.55 4.87 4.38 8.7 9.25 9.25-4.87.55-8.7 4.38-9.25 9.25C11.45 16.38 7.62 12.55 2.75 12 7.62 11.45 11.45 7.62 12 2.75Z" fill="currentColor" />
             </svg>
             <span className="whitespace-nowrap">Our Commitment</span>
-            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-[#D96A3A]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-black" aria-hidden="true">
               <path d="M12 2.75c.55 4.87 4.38 8.7 9.25 9.25-4.87.55-8.7 4.38-9.25 9.25C11.45 16.38 7.62 12.55 2.75 12 7.62 11.45 11.45 7.62 12 2.75Z" fill="currentColor" />
             </svg>
-            <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
+            <span className="h-px w-4 bg-black sm:w-8" />
           </div>
 
           <h2
             className="mt-3 text-2xl font-extrabold leading-[1.15] sm:mt-4 sm:text-4xl"
             style={{ color: NAVY }}
           >
-            Why Choose <span style={{ color: ACCENT }}>DermaGlow Studio</span>?
+            Why Choose <span style={{ color: "#000000" }}>DermaGlow Studio</span>?
           </h2>
 
           <div className="mt-3 flex flex-col gap-4 sm:mt-3">
@@ -111,7 +110,7 @@ export default function FertilityCommitmentSection() {
             </div>
           </div>
 
-          <div className="border-t border-[#D96A3A]/25" />
+          <div className="border-t border-[#eeeadd]" />
 
             <p className="max-w-2xl text-sm text-[#1F1F1F]/70 sm:block">
               Our focus is simple: safe treatments, honest recommendations, and
@@ -124,8 +123,7 @@ export default function FertilityCommitmentSection() {
 
           <a
             href="#book-consultation"
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:opacity-90 sm:mt-8 sm:w-fit sm:py-4"
-            style={{ backgroundColor: ACCENT }}
+            className="wave-btn relative mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-black px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:opacity-90 sm:mt-8 sm:w-fit sm:py-4"
           >
             Explore More
             <ArrowUpRightIcon />

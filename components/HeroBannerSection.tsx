@@ -6,8 +6,6 @@ import { useRouter } from "next/navigation";
 const FORM_SOURCE = "dermaglo-form";
 
 const NAVY = "#1F1F1F";
-const ACCENT = "#C85A2A";
-const PRIMARY = "#D96A3A";
 
 const USPS = [
   "Dermatologist-Led Care",
@@ -73,7 +71,7 @@ function PulseIcon() {
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#D96A3A"
+      stroke="#000000"
       strokeWidth={2.5}
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -151,13 +149,13 @@ export default function HeroBannerSection() {
   }
 
   return (
-    <section className="font-sans relative overflow-hidden bg-gradient-to-b from-[#E8E2DA] to-[#F8F5F1] px-4 py-8 sm:px-10 sm:py-8 lg:px-10">
+    <section className="font-sans relative overflow-hidden bg-[#ffffff] px-4 py-8 sm:px-10 sm:py-8 lg:px-10">
       <div
-        className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#D96A3A]/20 blur-3xl"
+        className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#eeeadd] blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-[#C85A2A]/10 blur-3xl"
+        className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-[#eeeadd] blur-3xl"
         aria-hidden="true"
       />
 
@@ -165,10 +163,9 @@ export default function HeroBannerSection() {
         {/* Left column: copy */}
         <div className="contents sm:block lg:col-span-5">
           <div
-            className="order-1 inline-flex w-full max-w-[390px] items-center justify-center gap-3 rounded-full border border-[#D96A3A]/55 bg-[#F8F5F1]/75 px-4 py-3 text-center text-[11px] font-bold leading-4 sm:w-fit sm:max-w-none sm:px-5 sm:text-sm sm:leading-5"
-            style={{ color: ACCENT }}
+            className="order-1 inline-flex w-full max-w-[390px] items-center justify-center gap-3 rounded-full border border-[#eeeadd] bg-[#eeeadd]/75 px-4 py-3 text-center text-[11px] font-bold leading-4 text-black sm:w-fit sm:max-w-none sm:px-5 sm:text-sm sm:leading-5"
           >
-            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#D96A3A]/18 text-[#C85A2A]">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#eeeadd] text-black">
               <PinIcon />
             </span>
             <span>
@@ -181,7 +178,7 @@ export default function HeroBannerSection() {
             style={{ color: NAVY }}
           >
             Personalised Dermatology for Every{" "}
-            <span style={{ color: ACCENT }}>Skin &amp; Hair Concern</span>
+            <span style={{ color: "#000000" }}>Skin &amp; Hair Concern</span>
           </h1>
 
           <p className="order-4 mt-6 max-w-md text-sm leading-[1.65] text-[#1F1F1F]/70 sm:mt-5 sm:text-sm sm:leading-6">
@@ -193,7 +190,7 @@ export default function HeroBannerSection() {
 
           <p
             className="order-5 mt-4 max-w-md border-l-4 pl-4 text-[11px] text-[#1F1F1F]/70 sm:text-xs sm:leading-5"
-            style={{ borderColor: PRIMARY }}
+            style={{ borderColor: "#eeeadd" }}
           >
             Led by{" "}
             <strong style={{ color: NAVY }}>
@@ -207,8 +204,7 @@ export default function HeroBannerSection() {
           <div className="order-6 mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:gap-4">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[13px] font-semibold text-white transition-colors hover:opacity-90 sm:py-4 sm:text-sm"
-               style={{ backgroundColor: ACCENT }}
+              className="wave-btn relative inline-flex items-center justify-center gap-2 rounded-full bg-black px-7 py-3.5 text-[13px] font-semibold text-white transition-colors hover:opacity-90 sm:py-4 sm:text-sm"
             >
               Book Your Consultation
               <ArrowIcon />
@@ -217,7 +213,7 @@ export default function HeroBannerSection() {
               href="https://wa.me/917019643144"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 px-7 py-3.5 text-[13px] font-semibold transition-colors hover:bg-[#25D366]/10 sm:py-4 sm:text-sm"
+              className="wave-btn relative inline-flex items-center justify-center gap-2 rounded-full border-2 px-7 py-3.5 text-[13px] font-semibold transition-colors hover:bg-[#25D366]/10 sm:py-4 sm:text-sm"
               style={{ borderColor: "#25D366", color: "#128C4A" }}
             >
               <WhatsAppIcon />
@@ -244,7 +240,7 @@ export default function HeroBannerSection() {
             <label className="flex flex-col gap-1.5">
               <span
                 className="text-[11px] font-semibold uppercase tracking-wide sm:text-xs"
-                style={{ color: PRIMARY }}
+                style={{ color: "#ffffff" }}
               >
                 Full Name
               </span>
@@ -259,7 +255,7 @@ export default function HeroBannerSection() {
             <label className="flex flex-col gap-1.5">
               <span
                 className="text-[11px] font-semibold uppercase tracking-wide sm:text-xs"
-                style={{ color: PRIMARY }}
+                style={{ color: "#ffffff" }}
               >
                 Phone Number
               </span>
@@ -278,7 +274,7 @@ export default function HeroBannerSection() {
             <label className="flex flex-col gap-1.5">
               <span
                 className="text-[11px] font-semibold uppercase tracking-wide sm:text-xs"
-                style={{ color: PRIMARY }}
+                style={{ color: "#ffffff" }}
               >
                 Skin &amp; Hair Concern
               </span>
@@ -312,8 +308,7 @@ export default function HeroBannerSection() {
             <button
               type="submit"
               disabled={submitting}
-              className="hero-submit-button mt-2 whitespace-nowrap rounded-full px-4 py-2.5 text-[13px] font-bold uppercase tracking-wide text-white transition-colors hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 sm:px-6 sm:py-4 sm:text-sm"
-              style={{ backgroundColor: ACCENT }}
+              className="wave-btn relative hero-submit-button mt-2 whitespace-nowrap rounded-full bg-black px-4 py-2.5 text-[13px] font-bold uppercase tracking-wide text-white transition-colors hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 sm:px-6 sm:py-4 sm:text-sm"
             >
               {submitting ? "Submitting..." : "Book Your Consultation"}
             </button>
@@ -324,21 +319,21 @@ export default function HeroBannerSection() {
         <div className="order-3 mt-7 flex justify-center sm:order-none sm:mt-0 lg:col-span-3">
           <div className="relative h-[330px] w-full max-w-[280px] sm:h-[370px] sm:max-w-[300px]">
             <div
-              className="absolute -right-5 top-8 h-[310px] w-[250px] rounded-t-full rounded-b-[2rem] border border-[#D96A3A]/30 bg-[#D96A3A]/20"
+              className="absolute -right-5 top-8 h-[310px] w-[250px] rounded-t-full rounded-b-[2rem] border border-[#eeeadd] bg-[#eeeadd]"
               aria-hidden="true"
             />
 
-            <div className="absolute inset-x-3 top-0 h-[340px] overflow-hidden rounded-t-full rounded-b-[2rem] border-[7px] border-[#F8F5F1] bg-[#E8E2DA]">
+            <div className="absolute inset-x-3 top-0 h-[340px] overflow-hidden rounded-t-full rounded-b-[2rem] border-[7px] border-[#eeeadd] bg-[#eeeadd]">
               <img
-                src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=900&q=90"
+                src="/images/DSC06638.jpg"
                 alt="Dr. Sahana, dermatologist"
                 className="h-full w-full object-cover object-center"
               />
               <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#1F1F1F]/55 to-transparent" />
             </div>
 
-            <div className="absolute bottom-0 left-1/2 flex w-[230px] -translate-x-1/2 items-center gap-3 rounded-2xl border border-white/70 bg-[#F8F5F1]/95 px-4 py-3 backdrop-blur">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#C85A2A] text-sm font-bold text-white">
+            <div className="absolute bottom-0 left-1/2 flex w-[230px] -translate-x-1/2 items-center gap-3 rounded-2xl border border-white/70 bg-[#eeeadd]/95 px-4 py-3 backdrop-blur">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-black text-sm font-bold text-white">
                 DS
               </span>
               <div>
@@ -350,11 +345,11 @@ export default function HeroBannerSection() {
             </div>
 
             <span
-              className="absolute left-0 top-20 h-14 w-14 rounded-full border-[10px] border-[#F8F5F1] bg-[#D96A3A]"
+              className="absolute left-0 top-20 h-14 w-14 rounded-full border-[10px] border-white bg-[#eeeadd]"
               aria-hidden="true"
             />
             <span
-              className="absolute right-1 top-3 h-4 w-4 rounded-full bg-[#C85A2A]"
+              className="absolute right-1 top-3 h-4 w-4 rounded-full bg-[#eeeadd]"
               aria-hidden="true"
             />
           </div>

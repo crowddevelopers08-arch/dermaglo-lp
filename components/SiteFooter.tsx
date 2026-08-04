@@ -75,11 +75,11 @@ function LocationIcon() {
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-[#E8E2DA] px-4 text-[#1F1F1F] sm:px-10 lg:px-20">
+    <footer className="bg-black px-4 text-white sm:px-10 lg:px-20">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 py-10 sm:py-12 md:grid-cols-[1.3fr_0.75fr_1fr] md:gap-12 lg:gap-20">
           <div>
-            <Link href="/" className="relative block h-14 w-44 sm:h-16 sm:w-52">
+            <Link href="/" className="relative block h-14 w-44 sm:h-16 sm:w-52 bg-white">
               <Image
                 src="/logo-re.png"
                 alt="DermaGlow Studio"
@@ -88,7 +88,7 @@ export default function SiteFooter() {
                 className="object-cover object-center"
               />
             </Link>
-            <p className="mt-4 max-w-md text-sm leading-6 text-[#1F1F1F]/68">
+            <p className="mt-4 max-w-md text-sm leading-6 text-white/68">
               Personalised, dermatologist-led skin and hair care focused on
               safe treatments, realistic expectations, and natural-looking
               results.
@@ -99,26 +99,26 @@ export default function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow DermaGlow Studio on Instagram"
-              className="mt-5 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#D96A3A] text-white transition-colors hover:bg-[#C85A2A]"
+              className="mt-5 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-black transition-opacity hover:opacity-90"
             >
               <InstagramIcon />
             </a>
           </div>
 
           <div>
-            <h2 className="text-base font-extrabold text-[#1F1F1F]">
+            <h2 className="text-base font-extrabold text-white">
               Quick Links
             </h2>
-            <div className="mt-3 h-0.5 w-10 bg-[#D96A3A]" />
+            <div className="mt-3 h-0.5 w-10 bg-[#eeeadd]" />
             <nav className="mt-5" aria-label="Footer navigation">
               <ul className="grid grid-cols-2 gap-x-5 gap-y-3 text-sm md:grid-cols-1">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="inline-flex items-center gap-2 text-[#1F1F1F]/70 transition-colors hover:text-[#C85A2A]"
+                      className="inline-flex items-center gap-2 text-white/70 transition-colors hover:text-white"
                     >
-                      <span className="text-[#D96A3A]">›</span>
+                      <span className="text-white">›</span>
                       {link.label}
                     </Link>
                   </li>
@@ -128,17 +128,17 @@ export default function SiteFooter() {
           </div>
 
           <div>
-            <h2 className="text-base font-extrabold text-[#1F1F1F]">
+            <h2 className="text-base font-extrabold text-white">
               Contact
             </h2>
-            <div className="mt-3 h-0.5 w-10 bg-[#D96A3A]" />
-            <ul className="mt-5 space-y-4 text-sm leading-6 text-[#1F1F1F]/70">
+            <div className="mt-3 h-0.5 w-10 bg-[#eeeadd]" />
+            <ul className="mt-5 space-y-4 text-sm leading-6 text-white/70">
               <li>
                 <a
                   href="tel:+917019643144"
-                  className="flex gap-3 transition-colors hover:text-[#C85A2A]"
+                  className="flex gap-3 transition-colors hover:text-white"
                 >
-                  <span className="text-[#D96A3A]">
+                  <span className="text-white">
                     <PhoneIcon />
                   </span>
                   <span>+91 70196 43144</span>
@@ -158,7 +158,7 @@ export default function SiteFooter() {
                 </a>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#D96A3A]">
+                <span className="text-white">
                   <LocationIcon />
                 </span>
                 <span>
@@ -171,11 +171,11 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-2 border-t border-[#D96A3A]/25 py-4 text-center text-xs leading-5 text-[#1F1F1F]/60 sm:flex-row sm:text-left">
+        <div className="flex flex-col items-center justify-between gap-2 border-t border-[#eeeadd]/25 py-4 text-center text-xs leading-5 text-white/60 sm:flex-row sm:text-left">
           <p>© 2026 Alpha Dental Studio. All Rights Reserved.</p>
           <Link
             href="/privacy-policy"
-            className="font-semibold transition-colors hover:text-[#C85A2A]"
+            className="font-semibold transition-colors hover:text-white"
           >
             Privacy Policy
           </Link>

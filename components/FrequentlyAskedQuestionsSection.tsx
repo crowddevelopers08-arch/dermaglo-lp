@@ -53,15 +53,15 @@ export default function FrequentlyAskedQuestionsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="bg-[#F8F5F1] px-4 py-8 sm:px-10 sm:py-16 lg:px-20 lg:py-10">
+    <section className="bg-white px-4 py-8 sm:px-10 sm:py-16 lg:px-20 lg:py-10">
       <div className="mx-auto grid max-w-[1215px] gap-8 sm:gap-14 lg:grid-cols-[456px_1fr] lg:gap-[100px]">
         <div>
-          <div className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#C85A2A] sm:gap-3 sm:text-xs">
-            <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
+          <div className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-black sm:gap-3 sm:text-xs">
+            <span className="h-px w-4 bg-black sm:w-8" />
             <svg
               viewBox="0 0 24 24"
               fill="none"
-              className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-[#D96A3A]"
+              className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-black"
               aria-hidden="true"
             >
               <path
@@ -73,7 +73,7 @@ export default function FrequentlyAskedQuestionsSection() {
             <svg
               viewBox="0 0 24 24"
               fill="none"
-              className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-[#D96A3A]"
+              className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-black"
               aria-hidden="true"
             >
               <path
@@ -81,12 +81,12 @@ export default function FrequentlyAskedQuestionsSection() {
                 fill="currentColor"
               />
             </svg>
-            <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
+            <span className="h-px w-4 bg-black sm:w-8" />
           </div>
 
           <h2 className="mt-5 text-3xl font-extrabold leading-[1.2] text-[#1F1F1F] sm:mt-4 sm:text-4xl">
             Frequently Asked{" "}
-            <span className="relative inline-block px-2 text-[#C85A2A]">
+            <span className="relative inline-block px-2 text-black">
               <span className="absolute inset-x-0 bottom-0 h-[38%] rounded-sm" />
               <span className="relative">Questions</span>
             </span>
@@ -94,12 +94,12 @@ export default function FrequentlyAskedQuestionsSection() {
 
           <div className="group relative mt-5 h-[280px] overflow-hidden rounded-[15px] sm:mt-6 sm:h-[360px] sm:rounded-[18px]">
             <img
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=90"
+              src="/images/faq.jpg"
               alt="Medical team answering a patient's questions"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-[#1F1F1F]/25" />
-            <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-[#C85A2A]/90 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-black/90 to-transparent" />
 
             <div className="absolute inset-x-5 bottom-4 flex flex-col items-center text-center sm:inset-x-8 sm:bottom-5">
               <p className="text-base leading-[1.35] text-white sm:text-lg">
@@ -109,7 +109,7 @@ export default function FrequentlyAskedQuestionsSection() {
               </p>
               <a
                 href="#book-consultation"
-                className="mt-4 inline-flex h-10 items-center gap-3 rounded-full bg-[#C85A2A] pl-5 pr-1.5 text-xs font-semibold text-white transition-colors hover:bg-[#D96A3A] sm:mt-7 sm:h-12 sm:gap-5 sm:pl-7 sm:pr-2 sm:text-sm"
+                className="wave-btn relative mt-4 inline-flex h-10 items-center gap-3 rounded-full bg-black pl-5 pr-1.5 text-xs font-semibold text-white transition-colors hover:opacity-90 sm:mt-7 sm:h-12 sm:gap-5 sm:pl-7 sm:pr-2 sm:text-sm"
               >
                 Get in Touch
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-base text-[#1F1F1F] sm:h-9 sm:w-9 sm:text-xl">
@@ -120,14 +120,14 @@ export default function FrequentlyAskedQuestionsSection() {
           </div>
         </div>
 
-        <div className="self-start rounded-[16px] border border-[#D96A3A]/30 px-4 py-2 sm:mt-18 sm:rounded-[20px] sm:px-12 sm:py-8">
+        <div className="self-start rounded-[16px] border border-[#eeeadd] px-4 py-2 sm:mt-18 sm:rounded-[20px] sm:px-12 sm:py-8">
           {faqs.map((faq, index) => {
             const isOpen = activeIndex === index;
 
             return (
               <div
                 key={faq.question}
-                className="border-b border-[#D96A3A]/30 last:border-b-0"
+                className="border-b border-[#eeeadd] last:border-b-0"
               >
                 <button
                   type="button"

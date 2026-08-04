@@ -3,8 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const PRIMARY = "#D96A3A";
-
 function MenuIcon() {
   return (
     <svg
@@ -71,7 +69,7 @@ export default function DermaGlowNavbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-[#E8E2DA] bg-[#F8F5F1]">
+    <header className="sticky top-0 z-30 border-b border-[#eeeadd] bg-[#ffffff]">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 sm:px-10 lg:px-16">
         {/* Left: logo */}
         <a href="/" className="relative h-12 w-36 shrink-0 sm:h-14 sm:w-44">
@@ -89,7 +87,7 @@ export default function DermaGlowNavbar() {
         <ul className="hidden items-center gap-9 text-sm font-medium text-[#1F1F1F] lg:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
-              <a href={link.href} className="transition-colors hover:text-[#C85A2A]">
+              <a href={link.href} className="transition-colors hover:text-black">
                 {link.label}
               </a>
             </li>
@@ -100,15 +98,14 @@ export default function DermaGlowNavbar() {
         <div className="flex items-center gap-4">
           <a
             href="tel:+917019643144"
-            className="hidden items-center gap-2 whitespace-nowrap rounded-full px-6 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90 lg:inline-flex"
-            style={{ backgroundColor: PRIMARY }}
+            className="wave-btn relative hidden items-center gap-2 whitespace-nowrap rounded-full bg-black px-6 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90 lg:inline-flex"
           >
             <PhoneIcon />
             <span>+91 70196 43144</span>
           </a>
 
           <button
-            className="rounded text-[#1F1F1F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D96A3A] lg:hidden"
+            className="rounded text-[#1F1F1F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#eeeadd] lg:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={open}
@@ -119,7 +116,7 @@ export default function DermaGlowNavbar() {
       </div>
 
       {open && (
-        <div className="border-t border-[#E8E2DA] px-6 py-4 lg:hidden">
+        <div className="border-t border-[#eeeadd] px-6 py-4 lg:hidden">
           <ul className="flex flex-col gap-1 text-sm font-medium text-[#1F1F1F]">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
@@ -131,8 +128,7 @@ export default function DermaGlowNavbar() {
           </ul>
           <a
             href="/#book-consultation"
-            className="mt-3 block rounded-full px-6 py-2.5 text-center text-sm font-semibold text-white"
-            style={{ backgroundColor: PRIMARY }}
+            className="wave-btn relative mt-3 block rounded-full bg-black px-6 py-2.5 text-center text-sm font-semibold text-white"
           >
             Book Consultation
           </a>

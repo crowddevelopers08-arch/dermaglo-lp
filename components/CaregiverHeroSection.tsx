@@ -8,13 +8,13 @@ function WhatsAppIcon() {
 
 export default function CaregiverHeroSection() {
   return (
-    <section className="font-sans relative min-h-[320px] overflow-hidden bg-[#1F1F1F] sm:min-h-[370px]">
+    <section className="font-sans relative min-h-[320px] overflow-hidden bg-[#1F1F1F] sm:min-h-[380px]">
       <img
-        src="/images/bg.avif"
+        src="/images/clinix.jpg"
         alt="Caregiver supporting an elderly woman"
         className="animate-hero-zoom absolute inset-0 h-full w-full object-cover object-[62%_center] sm:object-center"
       />
-      <div className="absolute inset-0 bg-[#C85A2A]/70" />
+      <div className="absolute inset-0 bg-black/70" />
 
       <div className="relative z-10 mx-auto flex min-h-[320px] max-w-[1300px] flex-col items-center justify-center px-4 py-8 text-center text-white sm:min-h-[370px] sm:px-6 sm:py-10">
         <div className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-white sm:gap-3 sm:text-xs">
@@ -58,13 +58,13 @@ export default function CaregiverHeroSection() {
         <div className="mt-6 flex w-full max-w-[330px] flex-col items-stretch justify-center gap-3 sm:mt-9 sm:max-w-none sm:flex-row sm:items-center">
           <a
             href="#book-consultation"
-            className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#F8F5F1] px-6 text-center text-xs font-bold text-[#1F1F1F] transition-colors hover:bg-[#E8E2DA] sm:min-h-[48px] sm:text-sm"
+            className="wave-btn relative inline-flex min-h-12 items-center justify-center rounded-full bg-black px-6 text-center text-xs font-bold text-white transition-opacity hover:opacity-90 sm:min-h-[48px] sm:text-sm"
           >
             Book Your Consultation Today
           </a>
           <a
             href="tel:+917019643144"
-            className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#F8F5F1] px-6 text-center text-xs font-bold text-white transition-colors hover:bg-[#F8F5F1] hover:text-[#1F1F1F] sm:min-h-[48px] sm:text-sm"
+            className="wave-btn relative inline-flex min-h-12 items-center justify-center rounded-full border border-black bg-black px-6 text-center text-xs font-bold text-white transition-opacity hover:opacity-90 sm:min-h-[48px] sm:text-sm"
           >
             Call Now
           </a>
@@ -72,7 +72,7 @@ export default function CaregiverHeroSection() {
               href="https://wa.me/917019643144"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] px-7 py-3.5 text-[13px] font-semibold text-white transition-colors hover:bg-[#25D366]/10 sm:py-3 sm:text-sm"
+              className="wave-btn relative inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] px-7 py-3.5 text-[13px] font-semibold text-white transition-colors hover:bg-[#25D366]/10 sm:py-3 sm:text-sm"
             >
               <WhatsAppIcon />
               WhatsApp Us

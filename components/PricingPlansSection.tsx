@@ -78,7 +78,7 @@ function CarouselArrow({
       type="button"
       onClick={onClick}
       aria-label={`${isPrevious ? "Previous" : "Next"} treatment`}
-      className="flex h-11 w-11 items-center justify-center rounded-full border border-[#D96A3A]/45 bg-[#F8F5F1] text-[#C85A2A] transition-all duration-300 hover:border-[#D96A3A] hover:bg-[#D96A3A] hover:text-white active:scale-90"
+      className="wave-btn relative flex h-11 w-11 items-center justify-center rounded-full bg-black text-white transition-all duration-300 hover:opacity-80 active:scale-90"
     >
       <svg
         viewBox="0 0 24 24"
@@ -108,15 +108,15 @@ function ConcernCard({
   index: number;
 }) {
   return (
-    <article data-pricing-animate className="group flex min-h-[520px] flex-col overflow-hidden rounded-[1.75rem] border border-[#D96A3A]/25 bg-[#F8F5F1] transition duration-500 hover:-translate-y-2 hover:border-[#D96A3A]/60">
-      <div className="relative h-[220px] overflow-hidden bg-[#E8E2DA]">
+    <article data-pricing-animate className="group flex min-h-[520px] flex-col overflow-hidden rounded-[1.75rem] border border-[#eeeadd] bg-white transition duration-500 hover:-translate-y-2 hover:border-black">
+      <div className="relative h-[220px] overflow-hidden bg-[#eeeadd]">
         <img
           src={concern.image}
           alt={concern.name}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/35 via-transparent to-transparent" />
-        <span className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/60 bg-[#F8F5F1]/90 text-sm font-extrabold text-[#C85A2A] backdrop-blur">
+        <span className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/60 bg-[#eeeadd]/90 text-sm font-extrabold text-black backdrop-blur">
           {String(index + 1).padStart(2, "0")}
         </span>
       </div>
@@ -125,14 +125,14 @@ function ConcernCard({
         <h3 className="text-xl font-extrabold leading-snug text-[#1F1F1F]">
           {concern.name}
         </h3>
-        <div className="mt-3 h-px w-12 bg-[#D96A3A]" />
+        <div className="mt-3 h-px w-12 bg-[#eeeadd]" />
         <p className="mt-4 text-sm leading-6 text-[#1F1F1F]/68">
           {concern.description}
         </p>
 
         <a
           href="#book-consultation"
-          className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-sm font-bold text-[#C85A2A] transition-colors hover:text-[#1F1F1F]"
+          className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-sm font-bold text-black transition-opacity hover:opacity-70"
         >
           Explore Treatment
           <ArrowIcon />
@@ -161,25 +161,25 @@ export default function PricingPlansSection() {
   };
 
   return (
-    <section className="font-sans bg-[#E8E2DA]/55 px-4 py-8 sm:px-10 sm:py-10 lg:px-20">
+    <section className="font-sans bg-black px-4 py-8 sm:px-10 sm:py-10 lg:px-20">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
-          <div data-pricing-animate className="inline-flex items-center max-sm:gap-1 max-sm:text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#C85A2A] sm:gap-3 sm:text-xs">
-            <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
-            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-[#D96A3A]" aria-hidden="true">
+          <div data-pricing-animate className="inline-flex items-center max-sm:gap-1 max-sm:text-[10.5px] font-bold uppercase tracking-[0.2em] text-white sm:gap-3 sm:text-xs">
+            <span className="h-px w-4 bg-white sm:w-8" />
+            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-white" aria-hidden="true">
               <path d="M12 2.75c.55 4.87 4.38 8.7 9.25 9.25-4.87.55-8.7 4.38-9.25 9.25C11.45 16.38 7.62 12.55 2.75 12 7.62 11.45 11.45 7.62 12 2.75Z" fill="currentColor" />
             </svg>
             <span className="whitespace-nowrap">Personalised Dermatology</span>
-            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-[#D96A3A]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 shrink-0 animate-[spin_4s_linear_infinite] text-white" aria-hidden="true">
               <path d="M12 2.75c.55 4.87 4.38 8.7 9.25 9.25-4.87.55-8.7 4.38-9.25 9.25C11.45 16.38 7.62 12.55 2.75 12 7.62 11.45 11.45 7.62 12 2.75Z" fill="currentColor" />
             </svg>
-            <span className="h-px w-4 bg-[#D96A3A]/65 sm:w-8" />
+            <span className="h-px w-4 bg-white sm:w-8" />
           </div>
-          <h2 data-pricing-animate className="mt-1 text-3xl font-extrabold leading-[1.15] text-[#1F1F1F] sm:text-4xl">
+          <h2 data-pricing-animate className="mt-1 text-3xl font-extrabold leading-[1.15] text-white sm:text-4xl">
             Your Concern{" "}
-            <span className="text-[#C85A2A]">Comes First</span>
+            <span className="text-white">Comes First</span>
           </h2>
-          <p data-pricing-animate className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-[#1F1F1F]/70">
+          <p data-pricing-animate className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-white/70">
             Every patient walks in with a different concern. Our role is to
             understand what&apos;s causing it and recommend the right solution,
             not just another treatment.
@@ -218,7 +218,7 @@ export default function PricingPlansSection() {
                   aria-current={activeConcern === index ? "true" : undefined}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     activeConcern === index
-                      ? "w-5 bg-[#D96A3A]"
+                      ? "w-5 bg-[#eeeadd]"
                       : "w-2 bg-[#8A6F63]/35"
                   }`}
                 />
