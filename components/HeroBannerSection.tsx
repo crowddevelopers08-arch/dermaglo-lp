@@ -325,7 +325,7 @@ export default function HeroBannerSection() {
 
             <div className="absolute inset-x-3 top-0 h-[340px] overflow-hidden rounded-t-full rounded-b-[2rem] border-[7px] border-[#eeeadd] bg-[#eeeadd]">
               <img
-                src="/images/DSC06638.jpg"
+                src="/images/DSC06638.JPG"
                 alt="Dr. Sahana, dermatologist"
                 className="h-full w-full object-cover object-center"
               />

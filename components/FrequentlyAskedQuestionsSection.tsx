@@ -94,7 +94,7 @@ export default function FrequentlyAskedQuestionsSection() {
 
           <div className="group relative mt-5 h-[280px] overflow-hidden rounded-[15px] sm:mt-6 sm:h-[360px] sm:rounded-[18px]">
             <img
-              src="/images/faq.jpg"
+              src="/images/faq.JPG"
               alt="Medical team answering a patient's questions"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />

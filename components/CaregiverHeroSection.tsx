@@ -10,7 +10,7 @@ export default function CaregiverHeroSection() {
   return (
     <section className="font-sans relative min-h-[320px] overflow-hidden bg-[#1F1F1F] sm:min-h-[380px]">
       <img
-        src="/images/clinix.jpg"
+        src="/images/clinix.JPG"
         alt="Caregiver supporting an elderly woman"
         className="animate-hero-zoom absolute inset-0 h-full w-full object-cover object-[62%_center] sm:object-center"
       />

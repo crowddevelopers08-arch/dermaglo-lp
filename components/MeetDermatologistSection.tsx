@@ -5,7 +5,7 @@ export default function MeetDermatologistSection() {
         <div className="order-4 relative mx-auto mt-6 h-[360px] w-full max-w-[590px] sm:order-1 sm:mt-0 sm:h-[610px]">
           <div className="absolute left-0 top-0 h-[78%] w-[72%] overflow-hidden rounded-[1.75rem] rounded-br-[5rem] border-[6px] border-white bg-[#eeeadd] sm:rounded-[2.5rem] sm:rounded-br-[8rem] sm:border-[10px]">
             <img
-              src="/images/doctors.jpg"
+              src="/images/doctors.JPG"
               alt="Dr. Sahana"
               className="h-full w-full object-cover object-center"
             />
@@ -13,7 +13,7 @@ export default function MeetDermatologistSection() {
 
           <div className="absolute bottom-0 right-0 h-[52%] w-[54%] overflow-hidden rounded-[1.5rem] rounded-tl-[4rem] border-[6px] border-white bg-[#eeeadd] sm:rounded-[2rem] sm:rounded-tl-[7rem] sm:border-[10px]">
             <img
-              src="/images/clinic.jpg"
+              src="/images/clinic.JPG"
               alt="Dermatology consultation"
               className="h-full w-full object-cover object-center"
             />
