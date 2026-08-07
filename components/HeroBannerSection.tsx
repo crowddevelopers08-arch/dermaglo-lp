@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const FORM_SOURCE = "dermaglo-form";
 
@@ -324,10 +325,13 @@ export default function HeroBannerSection() {
             />
 
             <div className="absolute inset-x-3 top-0 h-[340px] overflow-hidden rounded-t-full rounded-b-[2rem] border-[7px] border-[#eeeadd] bg-[#eeeadd]">
-              <img
+              <Image
                 src="/images/DSC06638.JPG"
                 alt="Dr. Sahana, dermatologist"
-                className="h-full w-full object-cover object-center"
+                fill
+                sizes="(max-width: 639px) 280px, 300px"
+                className="object-cover object-center"
+                priority
               />
               <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#1F1F1F]/55 to-transparent" />
             </div>

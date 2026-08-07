@@ -18,9 +18,9 @@ export default function Home() {
       <FadeIn direction="fade" duration={1200} staggerChildren staggerDelay={180} className="w-full">
         <HeroBannerSection />
       </FadeIn>
-      <FadeIn direction="up" duration={1200} staggerChildren staggerDelay={180} className="w-full">
-        <BeforeAfterSection />
-      </FadeIn>
+      {/* <FadeIn direction="up" duration={1200} staggerChildren staggerDelay={180} className="w-full"> */}
+        {/* <BeforeAfterSection /> */}
+      {/* </FadeIn> */}
       <FadeIn direction="up" duration={1200} staggerChildren staggerDelay={180} className="w-full">
         <FertilityCommitmentSection />
       </FadeIn>

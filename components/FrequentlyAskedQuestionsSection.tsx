@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const faqs = [
   {
@@ -93,10 +94,12 @@ export default function FrequentlyAskedQuestionsSection() {
           </h2>
 
           <div className="group relative mt-5 h-[280px] overflow-hidden rounded-[15px] sm:mt-6 sm:h-[360px] sm:rounded-[18px]">
-            <img
+            <Image
               src="/images/faq.JPG"
               alt="Medical team answering a patient's questions"
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              fill
+              sizes="(max-width: 1023px) 100vw, 456px"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-[#1F1F1F]/25" />
             <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-black/90 to-transparent" />

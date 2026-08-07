@@ -1,21 +1,27 @@
+import Image from "next/image";
+
 export default function MeetDermatologistSection() {
   return (
     <section id="doctor" className="scroll-mt-24 font-sans overflow-hidden bg-white px-4 py-8 sm:px-10 sm:py-20 lg:px-20 lg:py-10">
       <div className="mx-auto grid max-w-[1380px] items-center gap-0 sm:gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
         <div className="order-4 relative mx-auto mt-6 h-[360px] w-full max-w-[590px] sm:order-1 sm:mt-0 sm:h-[610px]">
           <div className="absolute left-0 top-0 h-[78%] w-[72%] overflow-hidden rounded-[1.75rem] rounded-br-[5rem] border-[6px] border-white bg-[#eeeadd] sm:rounded-[2.5rem] sm:rounded-br-[8rem] sm:border-[10px]">
-            <img
-              src="/images/doctors.JPG"
+            <Image
+              src="/images/DSC06739.JPG"
               alt="Dr. Sahana"
-              className="h-full w-full object-cover object-center"
+              fill
+              sizes="(max-width: 639px) 250px, 425px"
+              className="object-cover object-center"
             />
           </div>
 
           <div className="absolute bottom-0 right-0 h-[52%] w-[54%] overflow-hidden rounded-[1.5rem] rounded-tl-[4rem] border-[6px] border-white bg-[#eeeadd] sm:rounded-[2rem] sm:rounded-tl-[7rem] sm:border-[10px]">
-            <img
+            <Image
               src="/images/clinic.JPG"
               alt="Dermatology consultation"
-              className="h-full w-full object-cover object-center"
+              fill
+              sizes="(max-width: 639px) 200px, 320px"
+              className="object-cover object-center"
             />
           </div>
 
