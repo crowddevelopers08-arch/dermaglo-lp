@@ -195,7 +195,7 @@ export default function HeroBannerSection() {
           >
             Led by{" "}
             <strong style={{ color: NAVY }}>
-              Dr Sahana (MBBS, MD Dermatology)
+              Dr Sahana Karthik (MBBS, MD Dermatology)
             </strong>
             , we combine clinical expertise with advanced aesthetic
             technologies to help you achieve healthy, natural-looking
