@@ -74,7 +74,7 @@ export default function MeetDermatologistSection() {
 
           <div className="order-5 mt-5 border-l-3 border-[#eeeadd] pl-4 sm:mt-8 sm:border-l-4 sm:pl-6">
             <p className="text-sm leading-6 text-[#1F1F1F]/75 sm:text-base sm:leading-7">
-              Dr Sahana is a qualified dermatologist dedicated to providing{" "}
+              Dr Sahana Karthik is a qualified dermatologist dedicated to providing{" "}
               <span className="font-bold text-[#1F1F1F]">
                 personalised care
               </span>{" "}
