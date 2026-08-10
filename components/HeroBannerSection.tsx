@@ -152,11 +152,11 @@ export default function HeroBannerSection() {
   return (
     <section className="font-sans relative overflow-hidden bg-[#ffffff] px-4 py-8 sm:px-10 sm:py-8 lg:px-10">
       <div
-        className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#eeeadd] blur-3xl"
+        className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#eeeadd] blur-2xl sm:-right-32 sm:-top-32 sm:h-96 sm:w-96 sm:blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-[#eeeadd] blur-3xl"
+        className="pointer-events-none absolute -left-12 bottom-0 h-40 w-40 rounded-full bg-[#eeeadd] blur-2xl sm:-left-24 sm:h-72 sm:w-72 sm:blur-3xl"
         aria-hidden="true"
       />
 
