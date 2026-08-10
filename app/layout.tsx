@@ -16,7 +16,7 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: "Best Skin & Hair Clinic in Rajarajeshwari Nagar | DermaGlow Studio",
   description:
-    "Dermatologist-led personalised skin and hair treatments in Rajarajeshwari Nagar, Bengaluru. Book a consultation with Dr. Sahana at DermaGlow Studio.",
+    "Dermatologist-led personalised skin and hair treatments in Rajarajeshwari Nagar, Bengaluru. Book a consultation with Dr. Sahana Karthik at DermaGlow Studio.",
   keywords: [
     "DermaGlow Studio",
     "dermatologist in Rajarajeshwari Nagar",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DermaGlow Studio | Skin & Hair Clinic in Rajarajeshwari Nagar",
     description:
-      "Personalised, dermatologist-led skin and hair treatments with Dr. Sahana in Rajarajeshwari Nagar, Bengaluru.",
+      "Personalised, dermatologist-led skin and hair treatments with Dr. Sahana Karthik in Rajarajeshwari Nagar, Bengaluru.",
     type: "website",
     locale: "en_IN",
     siteName: "DermaGlow Studio",

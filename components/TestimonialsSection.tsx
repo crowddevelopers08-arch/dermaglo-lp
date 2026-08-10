@@ -9,7 +9,7 @@ const testimonials = [
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=90",
     quote:
-      "I had been struggling with recurring acne and marks for years. Dr. Sahana explained the cause clearly and created a personalised plan that made my skin feel healthier and more confident.",
+      "I had been struggling with recurring acne and marks for years. Dr. Sahana Karthik explained the cause clearly and created a personalised plan that made my skin feel healthier and more confident.",
   },
   {
     name: "Meera Krishnan",

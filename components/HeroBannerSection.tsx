@@ -326,7 +326,7 @@ export default function HeroBannerSection() {
 
             <div className="absolute inset-x-3 top-0 h-[340px] overflow-hidden rounded-t-full rounded-b-[2rem] border-[7px] border-[#eeeadd] bg-[#eeeadd]">
               <Image
-                src="/images/DSC06638.JPG"
+                src="/images/doctor-sahana.JPEG"
                 alt="Dr. Sahana, dermatologist"
                 fill
                 sizes="(max-width: 639px) 280px, 300px"
@@ -341,7 +341,7 @@ export default function HeroBannerSection() {
                 DS
               </span>
               <div>
-                <p className="hero-doctor-name text-sm font-bold text-[#1F1F1F]">Dr. Sahana</p>
+                <p className="hero-doctor-name text-sm font-bold text-[#1F1F1F]">Dr.Sahana Karthik</p>
                 <p className="hero-doctor-qualification text-[11px] font-medium text-[#1F1F1F]/55">
                   MBBS, MD Dermatology
                 </p>

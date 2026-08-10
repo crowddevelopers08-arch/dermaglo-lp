@@ -8,7 +8,7 @@ export default function MeetDermatologistSection() {
           <div className="absolute left-0 top-0 h-[78%] w-[72%] overflow-hidden rounded-[1.75rem] rounded-br-[5rem] border-[6px] border-white bg-[#eeeadd] sm:rounded-[2.5rem] sm:rounded-br-[8rem] sm:border-[10px]">
             <Image
               src="/images/DSC06739.JPG"
-              alt="Dr. Sahana"
+              alt="Dr. Sahana Karthik"
               fill
               sizes="(max-width: 639px) 250px, 425px"
               className="object-cover object-center"
@@ -65,7 +65,7 @@ export default function MeetDermatologistSection() {
           </div>
 
           <h2 className="order-2 mt-3 text-2xl font-extrabold leading-tight text-[#1F1F1F] sm:mt-5 sm:text-4xl">
-            Dr. Sahana
+            Dr. Sahana Karthik
           </h2>
 
           <div className="order-3 mt-3 inline-flex w-fit rounded-full bg-black px-5 py-2.5 text-xs font-bold tracking-wide text-white sm:mt-4 sm:px-6 sm:py-3 sm:text-sm">
