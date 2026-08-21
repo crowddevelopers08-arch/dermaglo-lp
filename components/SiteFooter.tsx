@@ -172,7 +172,7 @@ export default function SiteFooter() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-2 border-t border-[#eeeadd]/25 py-4 text-center text-xs leading-5 text-white/60 sm:flex-row sm:text-left">
-          <p>© 2026 Alpha Dental Studio. All Rights Reserved.</p>
+          <p>© 2026 Dr. SAHANA'S SKIN AND HAIR CLINIC SAHANA SREENATH. All Rights Reserved.</p>
           <Link
             href="/privacy-policy"
             className="font-semibold transition-colors hover:text-white"
