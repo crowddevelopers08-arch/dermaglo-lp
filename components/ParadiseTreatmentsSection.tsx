@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 type Treatment = {
   title: string;
@@ -50,6 +50,20 @@ const treatments: Treatment[] = [
     image:
       "/images/icons-5.jpg",
   },
+  {
+    title: "Hifu",
+    image: "/images/hifu.png",
+  },
+  {
+    title: "Botox",
+    image: "/images/botox.jpg",
+    imagePosition: "center 30%",
+  },
+  {
+    title: "Fillers",
+    image: "/images/fillers.jpg",
+    imagePosition: "center 40%",
+  },
 ];
 
 function ArrowIcon({ direction }: { direction: "left" | "right" }) {
@@ -71,14 +85,53 @@ function ArrowIcon({ direction }: { direction: "left" | "right" }) {
 
 export default function ParadiseTreatmentsSection() {
   const sliderRef = useRef<HTMLDivElement>(null);
+  const lastInteractionRef = useRef(0);
 
-  const move = (direction: number) => {
-    const isMobile = window.innerWidth < 640;
-    sliderRef.current?.scrollBy({
-      left: direction * (isMobile ? sliderRef.current.clientWidth : 320),
-      behavior: "smooth",
+  const move = useCallback((direction: number) => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    const card = slider.firstElementChild as HTMLElement | null;
+    if (!card) return;
+
+    const gap = parseFloat(window.getComputedStyle(slider).columnGap) || 0;
+    const step = card.getBoundingClientRect().width + gap;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    if (maxScroll <= 0) return;
+
+    const atEnd = slider.scrollLeft >= maxScroll - 2;
+    const atStart = slider.scrollLeft <= 2;
+    const left = direction > 0 && atEnd
+      ? 0
+      : direction < 0 && atStart
+        ? maxScroll
+        : Math.max(0, Math.min(maxScroll, slider.scrollLeft + direction * step));
+
+    slider.scrollTo({
+      left,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
     });
-  };
+  }, []);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      const slider = sliderRef.current;
+      if (
+        !slider ||
+        document.hidden ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+        slider.matches(":hover") ||
+        slider.parentElement?.contains(document.activeElement) ||
+        Date.now() - lastInteractionRef.current < 4000
+      ) return;
+
+      move(1);
+    }, 4000);
+
+    return () => window.clearInterval(interval);
+  }, [move]);
 
   return (
     <section id="treatments" className="scroll-mt-24 font-sans relative overflow-hidden bg-[#ffffff] px-4 pb-8 pt-4 sm:px-10 sm:pb-[44px] sm:pt-[15px] lg:px-20">
@@ -146,6 +199,13 @@ export default function ParadiseTreatmentsSection() {
 
           <div
             ref={sliderRef}
+            tabIndex={0}
+            role="region"
+            aria-label="Treatments slider"
+            onPointerDown={() => { lastInteractionRef.current = Date.now(); }}
+            onTouchMove={() => { lastInteractionRef.current = Date.now(); }}
+            onKeyDown={() => { lastInteractionRef.current = Date.now(); }}
+            onWheel={() => { lastInteractionRef.current = Date.now(); }}
             className="scrollbar-hide mx-auto flex max-w-[1300px] snap-x snap-mandatory overflow-x-auto pb-3 sm:gap-4 sm:px-1 lg:justify-between"
           >
             {treatments.map((treatment) => (
