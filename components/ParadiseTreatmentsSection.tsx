@@ -24,17 +24,6 @@ const treatments: Treatment[] = [
     image:
       "/images/icons-3.avif",
   },
-  // {
-  //   title: "PRP Therapy",
-  //   image:
-  //     "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=700&q=90",
-  //   imagePosition: "center 65%",
-  // },
-  // {
-  //   title: "GFC Hair Therapy",
-  //   image:
-  //     "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=700&q=90",
-  // },
   {
     title: "Laser Hair Reduction",
     image:
@@ -63,6 +52,42 @@ const treatments: Treatment[] = [
     title: "Fillers",
     image: "/images/fillers.jpg",
     imagePosition: "center 40%",
+  },
+  {
+    title: "PRP Therapy",
+    image: "/images/prp-therapy.webp",
+  },
+  {
+    title: "Exosome Therapy",
+    image: "/images/microneedling.webp",
+  },
+  {
+    title: "QR678 Hair Therapy",
+    image: "/images/service-4.jpg",
+  },
+  {
+    title: "GFC Hair Therapy",
+    image: "/images/prp-therapy.webp",
+  },
+  {
+    title: "Microneedling",
+    image: "/images/microneedling.webp",
+  },
+  {
+    title: "Scar Rejuvenation",
+    image: "/images/service-1.avif",
+  },
+  {
+    title: "Tattoo Removal",
+    image: "/images/tattoo-removal.webp",
+  },
+  {
+    title: "Skin Tag Removal",
+    image: "/images/skin-tag-removal.webp",
+  },
+  {
+    title: "Wart Removal",
+    image: "/images/wart-removal.webp",
   },
 ];
 
@@ -124,11 +149,11 @@ export default function ParadiseTreatmentsSection() {
         window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
         slider.matches(":hover") ||
         slider.parentElement?.contains(document.activeElement) ||
-        Date.now() - lastInteractionRef.current < 4000
+        Date.now() - lastInteractionRef.current < 5000
       ) return;
 
-      move(1);
-    }, 4000);
+      move(5);
+    }, 5000);
 
     return () => window.clearInterval(interval);
   }, [move]);
